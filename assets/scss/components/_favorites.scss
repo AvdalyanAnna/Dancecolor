@@ -1,0 +1,31 @@
+.favorites {
+  &__header-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #6F6E6E;
+    margin-bottom: 48px;
+
+    a {
+      color: $primary;
+      border-bottom: 1px dashed #EC4B3C;
+      transition: 0.3s;
+
+      &:hover {
+        border-style: solid;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .favorites__header-text {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .favorites__header-text {
+    margin-bottom: 16px;
+  }
+}

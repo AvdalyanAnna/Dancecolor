@@ -1,0 +1,201 @@
+.accordion {
+  margin: 38px 0;
+
+  &-item {
+    margin-bottom: 20px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      .accordion-header {
+        border-bottom: 1px solid #24292D;
+        background-color: #fff;
+      }
+
+      .accordion-header__arrow {
+        transform: rotate(-180deg);
+      }
+
+      //.accordion-collapse {
+      //  display: block;
+      //}
+    }
+  }
+
+  &-header {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding: 32px;
+    background: #F3F3F3;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &__list {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex: 1;
+    }
+
+    &__arrow {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__item {
+      display: flex;
+      gap: 16px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: #BDBFC2;
+
+      em {
+        display: none;
+      }
+
+      span {
+        color: #212121;
+      }
+    }
+  }
+
+  &-collapse {
+    display: none;
+  }
+
+  &-body {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .accordion {
+    margin: 6px 0;
+
+    &-item {
+      margin-bottom: 20px;
+
+      &.active {
+        .accordion-header {
+          border-bottom: 1px solid #24292D;
+          background-color: #fff;
+        }
+
+        .accordion-header__arrow {
+          transform: rotate(-180deg);
+        }
+
+        .accordion-collapse {
+          display: block;
+        }
+      }
+    }
+
+    &-header {
+      padding: 21.5px 18px;
+
+      &__list {
+        gap: 14px;
+      }
+
+      &__arrow {
+        width: 32px;
+        height: 32px;
+      }
+
+      &__item {
+        font-size: 0;
+        gap: 10px;
+
+        span {
+          font-size: 18px;
+        }
+
+        em {
+          font-style: normal;
+          display: block;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-collapse {
+      display: none;
+    }
+
+    &-body {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .accordion {
+    margin: 6px 0;
+
+    &-item {
+      margin-bottom: 20px;
+
+      &.active {
+        .accordion-header {
+          border-bottom: 1px solid #24292D;
+          background-color: #fff;
+        }
+
+        .accordion-header__arrow {
+          transform: rotate(-180deg);
+        }
+
+        .accordion-collapse {
+          display: block;
+        }
+      }
+    }
+
+    &-header {
+      padding: 28px 5px;
+
+      &__list {
+        gap: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &__arrow {
+        width: 32px;
+        height: 32px;
+      }
+
+      &__item {
+        font-size: 0;
+        gap: 10px;
+
+        &:nth-last-child(1) {
+          display: none;
+        }
+
+        span {
+          font-size: 16px;
+        }
+
+        em {
+          font-style: normal;
+          display: block;
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-collapse {
+      display: none;
+    }
+
+    &-body {
+      margin: 20px 0;
+    }
+  }
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="main__body">
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<div>
+    <div class="wrapper">
+        <div class="main-banner">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item">
+                    <a href="#" class="breadcrumbs-link">
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs-item">
+                    Корзина
+                </li>
+            </ul>
+            <h1 class="big-title"><span>Корзина</span> <span class="big-title__span"> [3 товара]</span></h1>
+        </div>
+
+    </div>
+</div>
+<main class="main-white main-basket">
+    <div class="wrapper">
+        <div class="w-100">
+            <div class="basket-link m-2-0">
+                <div class="form-item form-item__checkbox">
+                    <input type="checkbox" id="input-checkbox" class="form-checkbox check-all"
+                           data-check=".form-checkbox" data-parent=".basket-products" checked>
+                    <label for="input-checkbox" class="form-label form-checkbox__label">Выбрать всё</label>
+                </div>
+                <div class="basket-delete delete-all" data-delete=".basket-product" data-parent=".basket-products">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 6H22V8H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V8H2V6H7V3C7 2.73478 7.10536 2.48043 7.29289 2.29289C7.48043 2.10536 7.73478 2 8 2H16C16.2652 2 16.5196 2.10536 16.7071 2.29289C16.8946 2.48043 17 2.73478 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+                              fill="#24292D"/>
+                    </svg>
+                    Удалить
+                    <span>3</span>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-inner">
+                <section class="basket-products">
+                    <h2 class="title title-line">Товары к заказу</h2>
+                    <div class="basket-product">
+                        <div class="basket-product-checkbox">
+                            <input type="checkbox" id="input-checkbox-2" class="form-checkbox" checked>
+                            <label for="input-checkbox-2" class="form-label form-checkbox__label"></label>
+                        </div>
+                        <div class="basket-product__img">
+                            <img src="img/basket-product.jpg" alt="basket-product">
+                        </div>
+                        <div class="basket-product__content">
+                            <div class="basket-product__content-top">
+                                <div class="basket-product__content-left">
+                                    <div class="basket-product__title">
+                                        Автомобильный аккумулятор HYUNDAI Enercell 75D23L
+                                    </div>
+                                    <div class="basket-product__code">Код товара: 0086233</div>
+                                </div>
+                                <div class="basket-product__content-right">
+                                    <div class="basket-product__price">
+                                        4 218 ₽
+                                    </div>
+                                    <div class="basket-product__info">
+                                        <span>10 300 ₽</span>
+                                        при обмене
+                                        @@include('./html/_info.html')
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket-product__content-bottom">
+                                <div class="basket-link">
+                                    <div class="basket-product__btn like">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.001 5.02898C14.35 2.91998 17.98 2.98998 20.243 5.25698C22.505 7.52498 22.583 11.137 20.479 13.493L11.999 21.985L3.52101 13.493C1.41701 11.137 1.49601 7.51898 3.75701 5.25698C6.02201 2.99298 9.64501 2.91698 12.001 5.02898ZM18.827 6.66998C17.327 5.16798 14.907 5.10698 13.337 6.51698L12.002 7.71498L10.666 6.51798C9.09101 5.10598 6.67601 5.16798 5.17201 6.67198C3.68201 8.16198 3.60701 10.547 4.98001 12.123L12 19.154L19.02 12.124C20.394 10.547 20.319 8.16498 18.827 6.66998Z"
+                                                  fill="#24292D"/>
+                                        </svg>
+                                        В избранное
+                                    </div>
+                                    <div class="basket-product__btn delete" data-delete=".basket-product">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 6H22V8H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V8H2V6H7V3C7 2.73478 7.10536 2.48043 7.29289 2.29289C7.48043 2.10536 7.73478 2 8 2H16C16.2652 2 16.5196 2.10536 16.7071 2.29289C16.8946 2.48043 17 2.73478 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+                                                  fill="#24292D"/>
+                                        </svg>
+                                        Удалить
+                                    </div>
+                                </div>
+                                <div class="kilograms" data-min="1" data-step="1" data-id="1">
+                                    <div class="minus disabled">
+                                        <svg width="14" height="3" viewBox="0 0 14 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0.5H14V2.5H0V0.5Z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="kilogram">
+                                        <input type="number" max="999" class="kol" name="10338" min="1" step="1"
+                                               value="123">
+                                    </div>
+                                    <div class="plus">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 11.5V5.5H13V11.5H19V13.5H13V19.5H11V13.5H5V11.5H11Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-product">
+                        <div class="basket-product-checkbox">
+                            <input type="checkbox" id="input-checkbox-3" class="form-checkbox" checked>
+                            <label for="input-checkbox-3" class="form-label form-checkbox__label"></label>
+                        </div>
+                        <div class="basket-product__img">
+                            <img src="img/basket-product-1.jpg" alt="basket-product">
+                        </div>
+                        <div class="basket-product__content">
+                            <div class="basket-product__content-top">
+                                <div class="basket-product__content-left">
+                                    <div class="basket-product__title">
+                                        Автомобильный аккумулятор АкТех АТ 62-З-R в низком корпусе
+                                    </div>
+                                    <div class="basket-product__code">Код товара: 0086233</div>
+                                </div>
+                                <div class="basket-product__content-right">
+                                    <div class="basket-product__price">
+                                        4 218 ₽
+                                    </div>
+                                    <div class="basket-product__info">
+                                        <span>10 300 ₽</span>
+                                        при обмене
+                                        @@include('./html/_info.html')
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket-product__content-bottom">
+                                <div class="basket-link">
+                                    <div class="basket-product__btn like">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.001 5.02898C14.35 2.91998 17.98 2.98998 20.243 5.25698C22.505 7.52498 22.583 11.137 20.479 13.493L11.999 21.985L3.52101 13.493C1.41701 11.137 1.49601 7.51898 3.75701 5.25698C6.02201 2.99298 9.64501 2.91698 12.001 5.02898ZM18.827 6.66998C17.327 5.16798 14.907 5.10698 13.337 6.51698L12.002 7.71498L10.666 6.51798C9.09101 5.10598 6.67601 5.16798 5.17201 6.67198C3.68201 8.16198 3.60701 10.547 4.98001 12.123L12 19.154L19.02 12.124C20.394 10.547 20.319 8.16498 18.827 6.66998Z"
+                                                  fill="#24292D"/>
+                                        </svg>
+                                        В избранное
+                                    </div>
+                                    <div class="basket-product__btn delete" data-delete=".basket-product">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 6H22V8H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V8H2V6H7V3C7 2.73478 7.10536 2.48043 7.29289 2.29289C7.48043 2.10536 7.73478 2 8 2H16C16.2652 2 16.5196 2.10536 16.7071 2.29289C16.8946 2.48043 17 2.73478 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+                                                  fill="#24292D"/>
+                                        </svg>
+                                        Удалить
+                                    </div>
+                                </div>
+                                <div class="kilograms" data-min="1" data-step="1" data-id="1">
+                                    <div class="minus disabled">
+                                        <svg width="14" height="3" viewBox="0 0 14 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0.5H14V2.5H0V0.5Z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="kilogram">
+                                        <input type="number" max="999" class="kol" name="10338" min="1" step="1"
+                                               value="123">
+                                    </div>
+                                    <div class="plus">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 11.5V5.5H13V11.5H19V13.5H13V19.5H11V13.5H5V11.5H11Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-product">
+                        <div class="basket-product-checkbox">
+                            <input type="checkbox" id="input-checkbox-3" class="form-checkbox" checked>
+                            <label for="input-checkbox-3" class="form-label form-checkbox__label"></label>
+                        </div>
+                        <div class="basket-product__img">
+                            <img src="img/basket-product-2.jpg" alt="basket-product">
+                        </div>
+                        <div class="basket-product__content">
+                            <div class="basket-product__content-top">
+                                <div class="basket-product__content-left">
+                                    <div class="basket-product__title">
+                                        Автомобильный аккумулятор Energizer Premium EM63L2
+                                    </div>
+                                    <div class="basket-product__code">Код товара: 0086233</div>
+                                </div>
+                                <div class="basket-product__content-right">
+                                    <div class="basket-product__price">
+                                        4 218 ₽
+                                    </div>
+                                    <div class="basket-product__info">
+                                        <span>10 300 ₽</span>
+                                        при обмене
+                                        @@include('./html/_info.html')
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket-product__content-bottom">
+                                <div class="basket-link">
+                                    <div class="basket-product__btn like">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.001 5.02898C14.35 2.91998 17.98 2.98998 20.243 5.25698C22.505 7.52498 22.583 11.137 20.479 13.493L11.999 21.985L3.52101 13.493C1.41701 11.137 1.49601 7.51898 3.75701 5.25698C6.02201 2.99298 9.64501 2.91698 12.001 5.02898ZM18.827 6.66998C17.327 5.16798 14.907 5.10698 13.337 6.51698L12.002 7.71498L10.666 6.51798C9.09101 5.10598 6.67601 5.16798 5.17201 6.67198C3.68201 8.16198 3.60701 10.547 4.98001 12.123L12 19.154L19.02 12.124C20.394 10.547 20.319 8.16498 18.827 6.66998Z"
+                                                  fill="#24292D"/>
+                                        </svg>
+                                        В избранное
+                                    </div>
+                                    <div class="basket-product__btn delete" data-delete=".basket-product">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17 6H22V8H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V8H2V6H7V3C7 2.73478 7.10536 2.48043 7.29289 2.29289C7.48043 2.10536 7.73478 2 8 2H16C16.2652 2 16.5196 2.10536 16.7071 2.29289C16.8946 2.48043 17 2.73478 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+                                                  fill="#24292D"/>
+                                        </svg>
+                                        Удалить
+                                    </div>
+                                </div>
+                                <div class="kilograms" data-min="1" data-step="1" data-id="1">
+                                    <div class="minus disabled">
+                                        <svg width="14" height="3" viewBox="0 0 14 3" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0.5H14V2.5H0V0.5Z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="kilogram">
+                                        <input type="number" max="999" class="kol" name="10338" min="1" step="1"
+                                               value="123">
+                                    </div>
+                                    <div class="plus">
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 11.5V5.5H13V11.5H19V13.5H13V19.5H11V13.5H5V11.5H11Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    <div class="title-line d-flex justify-space-between">
+                        <h2 class="title">Недоступно для заказа</h2>
+                        <div class="basket-delete  delete-all" data-delete=".basket-product"
+                             data-parent=".basket-products__disabled">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 6H22V8H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V8H2V6H7V3C7 2.73478 7.10536 2.48043 7.29289 2.29289C7.48043 2.10536 7.73478 2 8 2H16C16.2652 2 16.5196 2.10536 16.7071 2.29289C16.8946 2.48043 17 2.73478 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+                                      fill="#24292D"/>
+                            </svg>
+                            Удалить всё
+                        </div>
+                    </div>
+                    <div class="basket-products__disabled">
+                        <div class="basket-product basket-product__disabled">
+                            <div class="basket-product-checkbox">
+                                <input type="checkbox" id="input-checkbox-1" class="form-checkbox" checked>
+                                <label for="input-checkbox-1" class="form-label form-checkbox__label"></label>
+                            </div>
+                            <div class="basket-product__img">
+                                <img src="img/basket-product.jpg" alt="basket-product">
+                            </div>
+                            <div class="basket-product__content">
+                                <div class="basket-product__content-top">
+                                    <div class="basket-product__content-left">
+                                        <div class="basket-product__title">
+                                            Автомобильный аккумулятор HYUNDAI Enercell 75D23L
+                                        </div>
+                                        <div class="basket-product__code">Код товара: 0086233</div>
+                                    </div>
+                                </div>
+                                <div class="basket-product__content-bottom">
+                                    <div class="basket-link">
+                                        <div class="basket-product__button">
+                                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 22.5C6.477 22.5 2 18.023 2 12.5C2 6.977 6.477 2.5 12 2.5C17.523 2.5 22 6.977 22 12.5C22 18.023 17.523 22.5 12 22.5ZM12 20.5C14.1217 20.5 16.1566 19.6571 17.6569 18.1569C19.1571 16.6566 20 14.6217 20 12.5C20 10.3783 19.1571 8.34344 17.6569 6.84315C16.1566 5.34285 14.1217 4.5 12 4.5C9.87827 4.5 7.84344 5.34285 6.34315 6.84315C4.84285 8.34344 4 10.3783 4 12.5C4 14.6217 4.84285 16.6566 6.34315 18.1569C7.84344 19.6571 9.87827 20.5 12 20.5ZM11 7.5H13V9.5H11V7.5ZM11 11.5H13V17.5H11V11.5Z"
+                                                      fill="#FA822B"/>
+                                            </svg>
+                                            <span>Товара нет в наличии</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <!-- Aside -->
+            <aside class="aside aside-big">
+                <button class="btn btn-primary">Перейти к оформлению</button>
+                <div class="check">
+                    <div class="check-top">
+                        <div class="check-left">Итого</div>
+                        <div class="check-right">
+                            1 264 227,02 ₽
+                            <p>цена указана для <a href="#">г. Смоленск</a></p>
+                        </div>
+                    </div>
+                    <div class="check-bottom">
+                        <div class="check-item">
+                            <div class="check-left">Сумма</div>
+                            <div class="check-right">1 516 795,02 ₽</div>
+                        </div>
+                        <div class="check-item">
+                            <div class="check-left">Скидка</div>
+                            <div class="check-right"> 252 568 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+<div class="modal" id="login">
+    <div class="modal-inner">
+        <div class="modal__container">
+            <div class="modal__header">
+                <div class="modal__title">Вход в личный кабинет</div>
+                <div class="modal__close close"></div>
+            </div>
+            <div class="modal__alert">
+                <div class="modal__alert-svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20V20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z"
+                              fill="#EC4B3C"/>
+                    </svg>
+                </div>
+                <div class="modal__alert-content">Личный кабинет доступен только для оптовых покупателей</div>
+            </div>
+            <div action="#" class="modal__form">
+                <div class="modal__form-item form-item form-item__error">
+                    <label for="login-input" class="modal__form-label form-label">Адрес электронной почты</label>
+                    <input type="text" class="modal__form-input form-input" id="login-input"
+                           placeholder="Введие Адрес электронной почты">
+                    <p class="form-input__error">Электронный адрес в неверном формате</p>
+                </div>
+                <div class="modal__form-item form-item">
+                    <label for="password-input" class="modal__form-label form-label">Пароль</label>
+                    <input type="password" class="modal__form-input form-input" id="password-input"
+                           placeholder="Введие пароль">
+                    <div class="modal__form-eye">
+                        <div class="see">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.34178 18.7824L7.41078 18.2644L8.19778 15.3254C7.01975 14.8909 5.9249 14.2577 4.96078 13.4534L2.80778 15.6074L1.39278 14.1924L3.54678 12.0394C2.33086 10.5831 1.51387 8.83611 1.17578 6.96935L3.14378 6.61035C3.90278 10.8124 7.57878 14.0004 11.9998 14.0004C16.4198 14.0004 20.0968 10.8124 20.8558 6.61035L22.8238 6.96835C22.4861 8.83537 21.6695 10.5827 20.4538 12.0394L22.6068 14.1924L21.1918 15.6074L19.0388 13.4534C18.0747 14.2577 16.9798 14.8909 15.8018 15.3254L16.5888 18.2654L14.6578 18.7824L13.8698 15.8424C12.6321 16.0544 11.3674 16.0544 10.1298 15.8424L9.34178 18.7824Z"
+                                      fill="#212121"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="modal__form-remove">
+                    Забыли пароль?
+                </a>
+                <div class="modal__form-item form-item">
+                    <input type="submit" class="modal__form-input__submit form-input__submit">
+                </div>
+                <a href="#" class="modal__form-register">Зарегистрироваться как юридическое лицо</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+@@include('./html/_footer.html')
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+
+</html>

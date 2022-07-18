@@ -1,0 +1,86 @@
+.cooperation {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 40px;
+    &__end{
+      counter-reset: item +4;
+    }
+  }
+
+  &-item {
+    width: calc(50% - 20px);
+    position: relative;
+    padding-left: 85px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #DFE1E2;
+    counter-increment: item;
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      border-bottom: none;
+    }
+
+    &::before {
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 120%;
+      color: #BDBFC2;
+      left: 0;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 8px;
+  }
+
+  &-desc {
+    font-size: 20px;
+    line-height: 140%;
+    color: #5C5C5C;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .cooperation {
+    &-list {
+      margin: 10px 0 0;
+    }
+
+    &-desc {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  .cooperation {
+    &-list {
+      margin: 0;
+      gap: 0;
+    }
+
+    &-item {
+      width: 100%;
+      padding: 16px 16px 16px 72px;
+
+      &:nth-last-child(2) {
+        border-bottom: 1px solid #DFE1E2;
+      }
+
+      &::before {
+        font-size: 32px;
+      }
+    }
+    &-title {
+      font-size: 20px;
+    }
+  }
+}

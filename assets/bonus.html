@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="main__body">
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <div class="main-banner">
+            @@include('./components/_breadcrumbs1.html')
+            <h1 class="big-title">Каждому покупателю сертификат на 500 ₽ в подарок</h1>
+        </div>
+        <div class="main">
+            <div class="main-inner">
+                <div class="card-bonus__single">
+                    <div class="card-bonus__info">
+                        с 01 февраля по 20 марта
+                    </div>
+                    <img
+                        src="img/bonus-big.jpg"
+                        srcset="img/bonus-big-small.jpg 360px, img/bonus-big-media.jpg 480px, img/bonus-big.jpg 800px"
+                        alt="bonus"
+                        sizes="360px"
+                        class="card-bonus__img"
+                    >
+                    <p class="card-bonus__desc">
+                        Большинство аккумуляторных батарей при должном за ним уходе способны проработать 5-7 лет.
+                        Несколько простых действий вы можете выполнить сами, не прибегая к дорогостоящим услугам
+                        специалистов автомастерских и автосервисов.
+                        <br>
+                        <br>
+                        Долговечность и исправность работы аккумулятора зависит не только от его качества
+                        изготовления и применяемой при его производстве технологии, но и от правильной эксплуатации
+                        аккумулятора и его своевременного ухода.
+                    </p>
+                </div>
+            </div>
+            <!-- Aside -->
+            @@include('./html/_aside.html')
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+@@include('./html/_footer.html')
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+
+</html>

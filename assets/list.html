@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="main__body">
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+
+<div>
+    <div class="wrapper">
+        <div class="main-banner">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item">
+                    <a href="#" class="breadcrumbs-link">
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs-item">
+                    Подбор АКБ
+                </li>
+            </ul>
+            <h1 class="big-title w-100">Сравнить товары</h1>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="main main-white">
+        <div class="wrapper">
+            <div class="w-100 compare-products">
+                <div class="compare-products__header">
+                    <div class="compare-products__header-big">
+                        <div class="product-sort">
+                            <div class="product-sort__inner">
+                                <div class="product-sort__title">
+                                    Показывать:
+                                </div>
+                                <div class="product-sort__list__block">
+                                    <div class="product-sort__btn active">По популярности</div>
+                                </div>
+                                <div class="product-sort__list">
+                                    <div class="product-sort__btn sort-btn active">Различающиеся характеристики</div>
+                                    <div class="product-sort__btn sort-btn">Все характеристики</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare-products__header-media">
+                        <div class="product-sort__title">
+                            Показывать только различия
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" />
+                        </div>
+                    </div>
+
+                    <div class="basket-delete delete-all" data-delete=".compare-products-list__item" data-parent=".compare-products-list">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 6H22V8H20V21C20 21.2652 19.8946 21.5196 19.7071 21.7071C19.5196 21.8946 19.2652 22 19 22H5C4.73478 22 4.48043 21.8946 4.29289 21.7071C4.10536 21.5196 4 21.2652 4 21V8H2V6H7V3C7 2.73478 7.10536 2.48043 7.29289 2.29289C7.48043 2.10536 7.73478 2 8 2H16C16.2652 2 16.5196 2.10536 16.7071 2.29289C16.8946 2.48043 17 2.73478 17 3V6ZM18 8H6V20H18V8ZM9 11H11V17H9V11ZM13 11H15V17H13V11ZM9 4V6H15V4H9Z"
+                                  fill="#5C5C5C"/>
+                        </svg>
+                        Удалить список
+                    </div>
+                </div>
+            </div>
+            <div class="compare-products__table">
+                <div class="compare-products-list">
+                    <div class="compare-products-list__item">
+                        <div class="compare-products-item">
+                            <div class="compare-products-img">
+                                <img src="img/compare-product-1.jpg" alt="compare-product">
+                            </div>
+                            <div class="compare-products-title">Автомобильный аккумулятор HYUNDAI Enercell 75D23L</div>
+                        </div>
+                        <div class="compare-products-border compare-products-border__black"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-price">16 218 ₽</div>
+                            <div class="compare-products-map">для <a href="#">г. Смоленск</a></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__btns">
+                                <button class="compare-products-item__btn compare-products-item__btn-primary">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.93327 21.3337V5.33366H3.2666V2.66699H7.2666C7.62022 2.66699 7.95936 2.80747 8.20941 3.05752C8.45946 3.30756 8.59994 3.6467 8.59994 4.00033V20.0003H25.1839L27.8506 9.33366H11.2666V6.66699H29.5599C29.7626 6.667 29.9626 6.71321 30.1448 6.80211C30.3269 6.89101 30.4864 7.02026 30.611 7.18004C30.7357 7.33982 30.8224 7.52593 30.8643 7.72421C30.9063 7.92249 30.9025 8.12773 30.8533 8.32433L27.5199 21.6577C27.4477 21.946 27.2812 22.2019 27.0469 22.3848C26.8126 22.5677 26.5238 22.667 26.2266 22.667H7.2666C6.91298 22.667 6.57384 22.5265 6.32379 22.2765C6.07374 22.0264 5.93327 21.6873 5.93327 21.3337ZM8.59994 30.667C7.89269 30.667 7.21441 30.386 6.71432 29.8859C6.21422 29.3858 5.93327 28.7076 5.93327 28.0003C5.93327 27.2931 6.21422 26.6148 6.71432 26.1147C7.21441 25.6146 7.89269 25.3337 8.59994 25.3337C9.30718 25.3337 9.98546 25.6146 10.4856 26.1147C10.9857 26.6148 11.2666 27.2931 11.2666 28.0003C11.2666 28.7076 10.9857 29.3858 10.4856 29.8859C9.98546 30.386 9.30718 30.667 8.59994 30.667ZM24.5999 30.667C23.8927 30.667 23.2144 30.386 22.7143 29.8859C22.2142 29.3858 21.9333 28.7076 21.9333 28.0003C21.9333 27.2931 22.2142 26.6148 22.7143 26.1147C23.2144 25.6146 23.8927 25.3337 24.5999 25.3337C25.3072 25.3337 25.9855 25.6146 26.4856 26.1147C26.9857 26.6148 27.2666 27.2931 27.2666 28.0003C27.2666 28.7076 26.9857 29.3858 26.4856 29.8859C25.9855 30.386 25.3072 30.667 24.5999 30.667Z"></path>
+                                    </svg>
+                                </button>
+                                <button class="compare-products-item__btn delete" data-delete=".compare-products-list__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.6667 7.99984H29.3334V10.6665H26.6667V27.9998C26.6667 28.3535 26.5263 28.6926 26.2762 28.9426C26.0262 29.1927 25.687 29.3332 25.3334 29.3332H6.66675C6.31313 29.3332 5.97399 29.1927 5.72394 28.9426C5.47389 28.6926 5.33341 28.3535 5.33341 27.9998V10.6665H2.66675V7.99984H9.33341V3.99984C9.33341 3.64622 9.47389 3.30708 9.72394 3.05703C9.97399 2.80698 10.3131 2.6665 10.6667 2.6665H21.3334C21.687 2.6665 22.0262 2.80698 22.2762 3.05703C22.5263 3.30708 22.6667 3.64622 22.6667 3.99984V7.99984ZM24.0001 10.6665H8.00008V26.6665H24.0001V10.6665ZM12.0001 14.6665H14.6667V22.6665H12.0001V14.6665ZM17.3334 14.6665H20.0001V22.6665H17.3334V14.6665ZM12.0001 5.33317V7.99984H20.0001V5.33317H12.0001Z" fill="#A7A7A7"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title">Общие характеристики</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub">Страна производства</div>
+                            <div class="compare-products-item__text">Россия</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub">Пусковой ток</div>
+                            <div class="compare-products-item__text">520 А</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub">Емкость</div>
+                            <div class="compare-products-item__text">65 А·ч</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub">Тип аккумулятора</div>
+                            <div class="compare-products-item__text">кальциевый</div>
+                        </div>
+
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title">Габариты</div>
+                        </div>
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub">Типоразмер</div>
+                            <div class="compare-products-item__text">нет данных</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub">Вес</div>
+                            <div class="compare-products-item__text">15.8 кг</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                    </div>
+                    <div class="compare-products-list__item">
+                        <div class="compare-products-item">
+                            <div class="compare-products-img">
+                                <img src="img/compare-product-2.jpg" alt="compare-product">
+                            </div>
+                            <div class="compare-products-title">Автомобильный аккумулятор АкТех АТ 62-З-R в низком корпусе</div>
+                        </div>
+                        <div class="compare-products-border compare-products-border__black"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-price">16 218 ₽</div>
+                            <div class="compare-products-map">для <a href="#">г. Смоленск</a></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__btns">
+                                <button class="compare-products-item__btn compare-products-item__btn-primary">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.93327 21.3337V5.33366H3.2666V2.66699H7.2666C7.62022 2.66699 7.95936 2.80747 8.20941 3.05752C8.45946 3.30756 8.59994 3.6467 8.59994 4.00033V20.0003H25.1839L27.8506 9.33366H11.2666V6.66699H29.5599C29.7626 6.667 29.9626 6.71321 30.1448 6.80211C30.3269 6.89101 30.4864 7.02026 30.611 7.18004C30.7357 7.33982 30.8224 7.52593 30.8643 7.72421C30.9063 7.92249 30.9025 8.12773 30.8533 8.32433L27.5199 21.6577C27.4477 21.946 27.2812 22.2019 27.0469 22.3848C26.8126 22.5677 26.5238 22.667 26.2266 22.667H7.2666C6.91298 22.667 6.57384 22.5265 6.32379 22.2765C6.07374 22.0264 5.93327 21.6873 5.93327 21.3337ZM8.59994 30.667C7.89269 30.667 7.21441 30.386 6.71432 29.8859C6.21422 29.3858 5.93327 28.7076 5.93327 28.0003C5.93327 27.2931 6.21422 26.6148 6.71432 26.1147C7.21441 25.6146 7.89269 25.3337 8.59994 25.3337C9.30718 25.3337 9.98546 25.6146 10.4856 26.1147C10.9857 26.6148 11.2666 27.2931 11.2666 28.0003C11.2666 28.7076 10.9857 29.3858 10.4856 29.8859C9.98546 30.386 9.30718 30.667 8.59994 30.667ZM24.5999 30.667C23.8927 30.667 23.2144 30.386 22.7143 29.8859C22.2142 29.3858 21.9333 28.7076 21.9333 28.0003C21.9333 27.2931 22.2142 26.6148 22.7143 26.1147C23.2144 25.6146 23.8927 25.3337 24.5999 25.3337C25.3072 25.3337 25.9855 25.6146 26.4856 26.1147C26.9857 26.6148 27.2666 27.2931 27.2666 28.0003C27.2666 28.7076 26.9857 29.3858 26.4856 29.8859C25.9855 30.386 25.3072 30.667 24.5999 30.667Z"></path>
+                                    </svg>
+                                </button>
+                                <button class="compare-products-item__btn  delete" data-delete=".compare-products-list__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.6667 7.99984H29.3334V10.6665H26.6667V27.9998C26.6667 28.3535 26.5263 28.6926 26.2762 28.9426C26.0262 29.1927 25.687 29.3332 25.3334 29.3332H6.66675C6.31313 29.3332 5.97399 29.1927 5.72394 28.9426C5.47389 28.6926 5.33341 28.3535 5.33341 27.9998V10.6665H2.66675V7.99984H9.33341V3.99984C9.33341 3.64622 9.47389 3.30708 9.72394 3.05703C9.97399 2.80698 10.3131 2.6665 10.6667 2.6665H21.3334C21.687 2.6665 22.0262 2.80698 22.2762 3.05703C22.5263 3.30708 22.6667 3.64622 22.6667 3.99984V7.99984ZM24.0001 10.6665H8.00008V26.6665H24.0001V10.6665ZM12.0001 14.6665H14.6667V22.6665H12.0001V14.6665ZM17.3334 14.6665H20.0001V22.6665H17.3334V14.6665ZM12.0001 5.33317V7.99984H20.0001V5.33317H12.0001Z" fill="#A7A7A7"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">Россия</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">520 А</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">65 А·ч</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">гибридный</div>
+                        </div>
+
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">242x175x175</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">нет данных</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                    </div>
+                    <div class="compare-products-list__item">
+                        <div class="compare-products-item">
+                            <div class="compare-products-img">
+                                <img src="img/compare-product-3.png" alt="compare-product">
+                            </div>
+                            <div class="compare-products-title">Автомобильный аккумулятор Energizer Premium EM63L2</div>
+                        </div>
+                        <div class="compare-products-border compare-products-border__black"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-price">16 218 ₽</div>
+                            <div class="compare-products-map">для <a href="#">г. Смоленск</a></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__btns">
+                                <button class="compare-products-item__btn compare-products-item__btn-primary">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.93327 21.3337V5.33366H3.2666V2.66699H7.2666C7.62022 2.66699 7.95936 2.80747 8.20941 3.05752C8.45946 3.30756 8.59994 3.6467 8.59994 4.00033V20.0003H25.1839L27.8506 9.33366H11.2666V6.66699H29.5599C29.7626 6.667 29.9626 6.71321 30.1448 6.80211C30.3269 6.89101 30.4864 7.02026 30.611 7.18004C30.7357 7.33982 30.8224 7.52593 30.8643 7.72421C30.9063 7.92249 30.9025 8.12773 30.8533 8.32433L27.5199 21.6577C27.4477 21.946 27.2812 22.2019 27.0469 22.3848C26.8126 22.5677 26.5238 22.667 26.2266 22.667H7.2666C6.91298 22.667 6.57384 22.5265 6.32379 22.2765C6.07374 22.0264 5.93327 21.6873 5.93327 21.3337ZM8.59994 30.667C7.89269 30.667 7.21441 30.386 6.71432 29.8859C6.21422 29.3858 5.93327 28.7076 5.93327 28.0003C5.93327 27.2931 6.21422 26.6148 6.71432 26.1147C7.21441 25.6146 7.89269 25.3337 8.59994 25.3337C9.30718 25.3337 9.98546 25.6146 10.4856 26.1147C10.9857 26.6148 11.2666 27.2931 11.2666 28.0003C11.2666 28.7076 10.9857 29.3858 10.4856 29.8859C9.98546 30.386 9.30718 30.667 8.59994 30.667ZM24.5999 30.667C23.8927 30.667 23.2144 30.386 22.7143 29.8859C22.2142 29.3858 21.9333 28.7076 21.9333 28.0003C21.9333 27.2931 22.2142 26.6148 22.7143 26.1147C23.2144 25.6146 23.8927 25.3337 24.5999 25.3337C25.3072 25.3337 25.9855 25.6146 26.4856 26.1147C26.9857 26.6148 27.2666 27.2931 27.2666 28.0003C27.2666 28.7076 26.9857 29.3858 26.4856 29.8859C25.9855 30.386 25.3072 30.667 24.5999 30.667Z"></path>
+                                    </svg>
+                                </button>
+                                <button class="compare-products-item__btn delete" data-delete=".compare-products-list__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.6667 7.99984H29.3334V10.6665H26.6667V27.9998C26.6667 28.3535 26.5263 28.6926 26.2762 28.9426C26.0262 29.1927 25.687 29.3332 25.3334 29.3332H6.66675C6.31313 29.3332 5.97399 29.1927 5.72394 28.9426C5.47389 28.6926 5.33341 28.3535 5.33341 27.9998V10.6665H2.66675V7.99984H9.33341V3.99984C9.33341 3.64622 9.47389 3.30708 9.72394 3.05703C9.97399 2.80698 10.3131 2.6665 10.6667 2.6665H21.3334C21.687 2.6665 22.0262 2.80698 22.2762 3.05703C22.5263 3.30708 22.6667 3.64622 22.6667 3.99984V7.99984ZM24.0001 10.6665H8.00008V26.6665H24.0001V10.6665ZM12.0001 14.6665H14.6667V22.6665H12.0001V14.6665ZM17.3334 14.6665H20.0001V22.6665H17.3334V14.6665ZM12.0001 5.33317V7.99984H20.0001V5.33317H12.0001Z" fill="#A7A7A7"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">Турция</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">610 А</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">65 А·ч</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">нет данных</div>
+                        </div>
+
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">242х175х190</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">14 кг</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                    </div>
+                    <div class="compare-products-list__item">
+                        <div class="compare-products-item">
+                            <div class="compare-products-img">
+                                <img src="img/compare-product-2.jpg" alt="compare-product">
+                            </div>
+                            <div class="compare-products-title">Автомобильный аккумулятор АкТех АТ 62-З-R в низком корпусе</div>
+                        </div>
+                        <div class="compare-products-border compare-products-border__black"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-price">16 218 ₽</div>
+                            <div class="compare-products-map">для <a href="#">г. Смоленск</a></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__btns">
+                                <button class="compare-products-item__btn compare-products-item__btn-primary">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.93327 21.3337V5.33366H3.2666V2.66699H7.2666C7.62022 2.66699 7.95936 2.80747 8.20941 3.05752C8.45946 3.30756 8.59994 3.6467 8.59994 4.00033V20.0003H25.1839L27.8506 9.33366H11.2666V6.66699H29.5599C29.7626 6.667 29.9626 6.71321 30.1448 6.80211C30.3269 6.89101 30.4864 7.02026 30.611 7.18004C30.7357 7.33982 30.8224 7.52593 30.8643 7.72421C30.9063 7.92249 30.9025 8.12773 30.8533 8.32433L27.5199 21.6577C27.4477 21.946 27.2812 22.2019 27.0469 22.3848C26.8126 22.5677 26.5238 22.667 26.2266 22.667H7.2666C6.91298 22.667 6.57384 22.5265 6.32379 22.2765C6.07374 22.0264 5.93327 21.6873 5.93327 21.3337ZM8.59994 30.667C7.89269 30.667 7.21441 30.386 6.71432 29.8859C6.21422 29.3858 5.93327 28.7076 5.93327 28.0003C5.93327 27.2931 6.21422 26.6148 6.71432 26.1147C7.21441 25.6146 7.89269 25.3337 8.59994 25.3337C9.30718 25.3337 9.98546 25.6146 10.4856 26.1147C10.9857 26.6148 11.2666 27.2931 11.2666 28.0003C11.2666 28.7076 10.9857 29.3858 10.4856 29.8859C9.98546 30.386 9.30718 30.667 8.59994 30.667ZM24.5999 30.667C23.8927 30.667 23.2144 30.386 22.7143 29.8859C22.2142 29.3858 21.9333 28.7076 21.9333 28.0003C21.9333 27.2931 22.2142 26.6148 22.7143 26.1147C23.2144 25.6146 23.8927 25.3337 24.5999 25.3337C25.3072 25.3337 25.9855 25.6146 26.4856 26.1147C26.9857 26.6148 27.2666 27.2931 27.2666 28.0003C27.2666 28.7076 26.9857 29.3858 26.4856 29.8859C25.9855 30.386 25.3072 30.667 24.5999 30.667Z"></path>
+                                    </svg>
+                                </button>
+                                <button class="compare-products-item__btn delete" data-delete=".compare-products-list__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.6667 7.99984H29.3334V10.6665H26.6667V27.9998C26.6667 28.3535 26.5263 28.6926 26.2762 28.9426C26.0262 29.1927 25.687 29.3332 25.3334 29.3332H6.66675C6.31313 29.3332 5.97399 29.1927 5.72394 28.9426C5.47389 28.6926 5.33341 28.3535 5.33341 27.9998V10.6665H2.66675V7.99984H9.33341V3.99984C9.33341 3.64622 9.47389 3.30708 9.72394 3.05703C9.97399 2.80698 10.3131 2.6665 10.6667 2.6665H21.3334C21.687 2.6665 22.0262 2.80698 22.2762 3.05703C22.5263 3.30708 22.6667 3.64622 22.6667 3.99984V7.99984ZM24.0001 10.6665H8.00008V26.6665H24.0001V10.6665ZM12.0001 14.6665H14.6667V22.6665H12.0001V14.6665ZM17.3334 14.6665H20.0001V22.6665H17.3334V14.6665ZM12.0001 5.33317V7.99984H20.0001V5.33317H12.0001Z" fill="#A7A7A7"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">Россия</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">520 А</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">65 А·ч</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">гибридный</div>
+                        </div>
+
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">242x175x175</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">нет данных</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                    </div>
+                    <div class="compare-products-list__item">
+                        <div class="compare-products-item">
+                            <div class="compare-products-img">
+                                <img src="img/compare-product-3.png" alt="compare-product">
+                            </div>
+                            <div class="compare-products-title">Автомобильный аккумулятор Energizer Premium EM63L2</div>
+                        </div>
+                        <div class="compare-products-border compare-products-border__black"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-price">16 218 ₽</div>
+                            <div class="compare-products-map">для <a href="#">г. Смоленск</a></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__btns">
+                                <button class="compare-products-item__btn compare-products-item__btn-primary">
+                                    <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.93327 21.3337V5.33366H3.2666V2.66699H7.2666C7.62022 2.66699 7.95936 2.80747 8.20941 3.05752C8.45946 3.30756 8.59994 3.6467 8.59994 4.00033V20.0003H25.1839L27.8506 9.33366H11.2666V6.66699H29.5599C29.7626 6.667 29.9626 6.71321 30.1448 6.80211C30.3269 6.89101 30.4864 7.02026 30.611 7.18004C30.7357 7.33982 30.8224 7.52593 30.8643 7.72421C30.9063 7.92249 30.9025 8.12773 30.8533 8.32433L27.5199 21.6577C27.4477 21.946 27.2812 22.2019 27.0469 22.3848C26.8126 22.5677 26.5238 22.667 26.2266 22.667H7.2666C6.91298 22.667 6.57384 22.5265 6.32379 22.2765C6.07374 22.0264 5.93327 21.6873 5.93327 21.3337ZM8.59994 30.667C7.89269 30.667 7.21441 30.386 6.71432 29.8859C6.21422 29.3858 5.93327 28.7076 5.93327 28.0003C5.93327 27.2931 6.21422 26.6148 6.71432 26.1147C7.21441 25.6146 7.89269 25.3337 8.59994 25.3337C9.30718 25.3337 9.98546 25.6146 10.4856 26.1147C10.9857 26.6148 11.2666 27.2931 11.2666 28.0003C11.2666 28.7076 10.9857 29.3858 10.4856 29.8859C9.98546 30.386 9.30718 30.667 8.59994 30.667ZM24.5999 30.667C23.8927 30.667 23.2144 30.386 22.7143 29.8859C22.2142 29.3858 21.9333 28.7076 21.9333 28.0003C21.9333 27.2931 22.2142 26.6148 22.7143 26.1147C23.2144 25.6146 23.8927 25.3337 24.5999 25.3337C25.3072 25.3337 25.9855 25.6146 26.4856 26.1147C26.9857 26.6148 27.2666 27.2931 27.2666 28.0003C27.2666 28.7076 26.9857 29.3858 26.4856 29.8859C25.9855 30.386 25.3072 30.667 24.5999 30.667Z"></path>
+                                    </svg>
+                                </button>
+                                <button class="compare-products-item__btn delete" data-delete=".compare-products-list__item">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.6667 7.99984H29.3334V10.6665H26.6667V27.9998C26.6667 28.3535 26.5263 28.6926 26.2762 28.9426C26.0262 29.1927 25.687 29.3332 25.3334 29.3332H6.66675C6.31313 29.3332 5.97399 29.1927 5.72394 28.9426C5.47389 28.6926 5.33341 28.3535 5.33341 27.9998V10.6665H2.66675V7.99984H9.33341V3.99984C9.33341 3.64622 9.47389 3.30708 9.72394 3.05703C9.97399 2.80698 10.3131 2.6665 10.6667 2.6665H21.3334C21.687 2.6665 22.0262 2.80698 22.2762 3.05703C22.5263 3.30708 22.6667 3.64622 22.6667 3.99984V7.99984ZM24.0001 10.6665H8.00008V26.6665H24.0001V10.6665ZM12.0001 14.6665H14.6667V22.6665H12.0001V14.6665ZM17.3334 14.6665H20.0001V22.6665H17.3334V14.6665ZM12.0001 5.33317V7.99984H20.0001V5.33317H12.0001Z" fill="#A7A7A7"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">Турция</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">610 А</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">65 А·ч</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">нет данных</div>
+                        </div>
+
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title"></div>
+                        </div>
+
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">242х175х190</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                        <div class="compare-products-item">
+                            <div class="compare-products-item__title-sub"></div>
+                            <div class="compare-products-item__text">14 кг</div>
+                        </div>
+                        <div class="compare-products-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+@@include('./html/_footer.html')
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

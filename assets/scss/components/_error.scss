@@ -1,0 +1,153 @@
+.error{
+  &-block{}
+  &-img{
+    max-width: 310px;
+    max-height: 323px;
+    position: relative;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    svg{
+      position: absolute;
+      left: -80%;
+      top: -72%;
+      transform: translate(50%,50%);
+    }
+  }
+  &-type{
+    font-weight: 700;
+    font-size: 316.45px;
+    line-height: 110%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 138px;
+    span{
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &-title{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &-desc{
+    font-size: 22px;
+    line-height: 160%;
+    text-align: center;
+    color: #5C5C5C;
+  }
+}
+
+.open-product__block-error.absolute{
+  align-items: center;
+  .open-product__block-content{
+    padding-top: 180px;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .open-product__block-error.absolute{
+    .open-product__block-img{
+      height: auto;
+      padding: 80px 0;
+    }
+    .open-product__block-content{
+      padding: 117px 40px 0;
+    }
+  }
+  .error{
+
+    &-block{}
+    &-img{
+      max-width: 265px;
+      max-height: 276px;
+      position: relative;
+      img{
+        margin-top: 40px;
+      }
+      svg{
+        width: 340px;
+        height: 340px;
+        top: -60%;
+      }
+    }
+    &-type{
+      font-size: 270px;
+      margin-bottom: 108px;
+    }
+    &-title{
+      font-size: 32px;
+    }
+    &-desc{
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .open-product__block-error.absolute{
+    .open-product__block-img{
+      height: auto;
+      padding: 80px 0;
+    }
+    .open-product__block-content{
+      padding: 70px 16px 0;
+    }
+  }
+  .error{
+    &-img{
+      max-width: 144px;
+      max-height: 150px;
+      position: relative;
+      img{
+        margin-top: 20px;
+      }
+      svg{
+        width: 186px;
+        height: 186px;
+        top: -60%;
+      }
+    }
+    &-type{
+      font-size: 147px;
+      margin-bottom: 70px;
+    }
+    &-title{
+      font-size: 24px;
+    }
+    &-desc{
+      font-size: 16px;
+    }
+  }
+}
+@media screen and (max-width: 359px) {
+  .error{
+    &-img{
+      max-width: 120px;
+      max-height: 120px;
+      img{
+        margin-top: 30px;
+      }
+      svg{
+        width: 160px;
+        height: 160px;
+        top: -60%;
+        left: -85%;
+      }
+    }
+    &-type{
+      font-size: 147px;
+      margin-bottom: 70px;
+    }
+    &-title{
+      font-size: 24px;
+    }
+    &-desc{
+      font-size: 16px;
+    }
+  }
+}

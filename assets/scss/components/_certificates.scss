@@ -1,0 +1,93 @@
+.certificates {
+  &-list {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      margin-right: 20px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #ffffff;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #212121;
+      height: 8px;
+    }
+  }
+  &-item {
+    min-width: calc(33.33% - 24px);
+    margin-bottom: 24px;
+  }
+  &-img {
+
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+
+    .lightbox{
+      position: relative;
+      display: block;
+      padding: 32px;
+      box-sizing: border-box;
+      &:hover{
+        &::before{
+          opacity: 1;
+        }
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        background: rgba($primary, 0.5) url(../img/zoom.png) no-repeat center center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    margin: 16px;
+  }
+  &-single{
+    max-width: 474px;
+    margin-top: 16px;
+    .certificates-title{
+      margin: 16px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .certificates {
+    &-item {
+      min-width: calc(50% - 24px);
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .certificates {
+    &-item {
+      min-width: calc(100%);
+    }
+    &-title{
+      font-size: 16px;
+    }
+  }
+}
