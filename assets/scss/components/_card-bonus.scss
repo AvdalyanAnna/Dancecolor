@@ -94,6 +94,11 @@
     .card-bonus__img {
       width: 420px;
       height: auto;
+      img{
+        width: 420px;
+        height: auto;
+        object-fit: cover;
+      }
     }
 
     .card-bonus__content {
@@ -121,6 +126,12 @@
     .card-bonus__img {
       height: 300px;
       margin: 24px 0;
+
+      img{
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+      }
     }
 
     .card-bonus__info {
@@ -172,6 +183,11 @@
   .card-bonus__big {
     .card-bonus__img {
       width: 300px;
+      img{
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+      }
     }
 
     .card-bonus__title {

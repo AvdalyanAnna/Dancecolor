@@ -7,7 +7,6 @@ $(document).ready(function () {
 
     $(".open__modal").on("click", function (e) {
         e.preventDefault();
-        $("body").css("overflow", "hidden");
         const open = $(this).data('open');
         $(open).fadeIn();
     });
@@ -197,8 +196,8 @@ $(document).ready(function () {
         const item = $(this).data('item')
         $(this).parent().children('.tab').removeClass('active')
         $(this).addClass('active')
-        $(`.tab-content`).slideUp(300)
-        $(`.tab-content${item}`).slideDown(300)
+        $(`.tab-content`).slideUp(0)
+        $(`.tab-content${item}`).slideDown(0)
     })
 
 
@@ -341,5 +340,10 @@ $(document).ready(function () {
         }
         element.slider("values", 1, max);
     });
+    $('.footer-more-inner').slick({
+        infinite: false,
+        nextArrow: $('.footer-more__arrow-right'),
+        prevArrow: $('.footer-more__arrow-left'),
+    })
 })
 

@@ -164,6 +164,12 @@
 
   .card-bonus__big .card-bonus__img {
     max-width: 347px;
+
+    img {
+      max-width: 347px;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -262,7 +268,7 @@
   }
 
   &:hover {
-    .img-hover__img {
+    .img-hover__img img {
       transform: scale(1.1);
     }
   }
@@ -272,11 +278,22 @@
   overflow: hidden;
 
   .card-bonus__img {
-    transition: 0.3s;
+    overflow: hidden;
+    width: 100%;
+    @media screen and (max-width: 720px){
+  max-width: 100% !important;
+      img{
+        width: 100%;
+        max-width: 100% !important;
+      }
+  }
+    img {
+      transition: 0.3s;
+    }
   }
 
   &:hover {
-    .card-bonus__img {
+    .card-bonus__img img {
       transform: scale(1.1);
     }
   }
@@ -284,6 +301,7 @@
 
 .home-section__more {
   cursor: pointer;
+
   svg {
     transition: .3s;
   }
@@ -396,7 +414,8 @@
       min-width: 430px;
       padding: 60px 39px 0;
     }
-    .open-product__block-error.absolute .open-product__block-img{
+
+    .open-product__block-error.absolute .open-product__block-img {
       padding: 0;
     }
   }
@@ -439,14 +458,14 @@
   .open-product__block-img__flex {
     min-height: 510px;
   }
-  .open-product__block-img-1{
+  .open-product__block-img-1 {
     min-height: 470px;
   }
-  .home-page__info .open-product__block-title{
+  .home-page__info .open-product__block-title {
     font-size: 28px;
     height: auto;
   }
-  .home-page__info{
+  .home-page__info {
     top: 40px;
     left: 40px;
   }
@@ -590,35 +609,35 @@
   .open-product__block-img__flex {
     min-height: 324px;
   }
-  .open-product__block-img-1{
+  .open-product__block-img-1 {
     min-height: 286px;
   }
-  .home-page__info .open-product__block-title{
+  .home-page__info .open-product__block-title {
     font-size: 20px;
     margin-bottom: 16px;
   }
-  .home-page__info{
+  .home-page__info {
     top: 32px;
     left: 16px;
   }
 
 }
 
-@media screen and (max-width: 450px){
-  .open-product__block-img-item .open-product__block-title{
+@media screen and (max-width: 450px) {
+  .open-product__block-img-item .open-product__block-title {
     max-width: 130px;
   }
-  .compare-products__header-media{
+  .compare-products__header-media {
     max-width: 100%;
     width: 100%;
   }
-  .personal-area__menu-item{
+  .personal-area__menu-item {
     min-width: 145px;
   }
-  .personal-area__menu-text{
+  .personal-area__menu-text {
     min-width: 115px;
   }
-  .product__img img{
+  .product__img img {
     height: 160px;
   }
 }

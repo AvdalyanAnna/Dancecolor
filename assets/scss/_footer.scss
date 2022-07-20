@@ -175,9 +175,8 @@
   }
 
   &-more {
-    display: flex;
-    justify-content: space-between;
     padding: 56px 80px 56px 62px;
+    position: relative;
 
     &__title {
       font-weight: 700;
@@ -191,18 +190,20 @@
       &s {
         display: flex;
         gap: 24px;
+        position: absolute;
+        right: 62px;
+        z-index: 3;
+        background: #222222;
       }
 
       path {
-        fill: #5C5C5C;
+        fill: #fff;
         transition: 0.3s;
       }
-
-      &:hover,
-      &-active {
-        path {
-          fill: #fff;
-        }
+    }
+    .slick-disabled{
+      path {
+        fill: #5C5C5C;
       }
     }
   }
@@ -298,6 +299,9 @@
   }
   .footer-more {
     padding: 30px 40px 18px;
+    .footer-more__arrows{
+      right: 40px;
+    }
 
     &__title {
       font-size: 24px;
@@ -380,6 +384,9 @@
   }
   .footer-more {
     padding: 24px 16px;
+    .footer-more__arrows{
+      right: 16px;
+    }
     align-items: center;
 
     svg {
