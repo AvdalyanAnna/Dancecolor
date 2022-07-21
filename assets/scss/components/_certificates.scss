@@ -3,6 +3,7 @@
     display: flex;
     gap: 24px;
     overflow-x: auto;
+
     &::-webkit-scrollbar {
       margin-right: 20px;
       height: 8px;
@@ -18,27 +19,35 @@
       height: 8px;
     }
   }
+
   &-item {
-    min-width: calc(33.33% - 24px);
+    //min-width: calc(33.33% - 24px);
+    min-width: 308.33px;
     margin-bottom: 24px;
+    margin-left: 24px;
   }
+
   &-img {
 
     width: 100%;
     background-color: #fff;
     position: relative;
     cursor: pointer;
+    padding: 32px;
 
-    .lightbox{
+
+    .lightbox {
       position: relative;
       display: block;
       padding: 32px;
       box-sizing: border-box;
-      &:hover{
-        &::before{
+
+      &:hover {
+        &::before {
           opacity: 1;
         }
       }
+
       &::before {
         content: '';
         position: absolute;
@@ -52,31 +61,75 @@
         transition: all 0.3s ease;
       }
     }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   }
-  &-title{
+
+  &-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 120%;
     margin: 16px;
   }
-  &-single{
+
+  &-single {
     max-width: 474px;
     margin-top: 16px;
-    .certificates-title{
+
+    .certificates-title {
       margin: 16px 0;
     }
   }
 }
 
+.certificates-cursor {
+  position: relative;
+  width: 0;
+  height: 0;
+  will-change: transform;
+  transform-style: preserve-3d;
+  z-index: 3;
+
+  &.active .cursor {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none;
+  }
+
+  .cursor {
+    position: absolute;
+    transform: translate(-12.25vh, -24vh);
+    @media screen and (max-width: 1500px) {
+      transform: translate(-9.25vh, -36vh);
+    }
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+    opacity: 0;
+    visibility: hidden;
+    background: #212121;
+    width: 74px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transition: opacity .3s ease-in-out, height .4s cubic-bezier(.339, -.18, .228, 1.656), width .4s cubic-bezier(.339, -.18, .228, 1.656);
+  }
+}
+
+
 @media screen and (max-width: 1400px) {
   .certificates {
     &-item {
-      min-width: calc(50% - 24px);
+      min-width: 330px;
     }
   }
 }
@@ -84,9 +137,10 @@
 @media screen and (max-width: 720px) {
   .certificates {
     &-item {
-      min-width: calc(100%);
+      min-width: 320px;
     }
-    &-title{
+
+    &-title {
       font-size: 16px;
     }
   }

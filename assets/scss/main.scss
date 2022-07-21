@@ -148,7 +148,7 @@ main {
 
   &-inner {
     max-width: 1165px;
-    width: 100%;
+    width: calc(100% - 422px);
   }
 
   &-white {

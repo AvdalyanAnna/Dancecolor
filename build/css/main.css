@@ -1729,14 +1729,16 @@ input, button {
     height: 8px; }
 
 .certificates-item {
-  min-width: calc(33.33% - 24px);
-  margin-bottom: 24px; }
+  min-width: 308.33px;
+  margin-bottom: 24px;
+  margin-left: 24px; }
 
 .certificates-img {
   width: 100%;
   background-color: #fff;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 32px; }
   .certificates-img .lightbox {
     position: relative;
     display: block;
@@ -1772,13 +1774,53 @@ input, button {
   .certificates-single .certificates-title {
     margin: 16px 0; }
 
+.certificates-cursor {
+  position: relative;
+  width: 0;
+  height: 0;
+  will-change: transform;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  z-index: 3; }
+  .certificates-cursor.active .cursor {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none; }
+  .certificates-cursor .cursor {
+    position: absolute;
+    -webkit-transform: translate(-12.25vh, -24vh);
+            transform: translate(-12.25vh, -24vh);
+    opacity: 0;
+    visibility: hidden;
+    background: #212121;
+    width: 74px;
+    height: 74px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    gap: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transition: opacity 0.3s ease-in-out, height 0.4s cubic-bezier(0.339, -0.18, 0.228, 1.656), width 0.4s cubic-bezier(0.339, -0.18, 0.228, 1.656); }
+    @media screen and (max-width: 1500px) {
+      .certificates-cursor .cursor {
+        -webkit-transform: translate(-9.25vh, -36vh);
+                transform: translate(-9.25vh, -36vh); } }
+    @media screen and (max-width: 1200px) {
+      .certificates-cursor .cursor {
+        display: none; } }
+
 @media screen and (max-width: 1400px) {
   .certificates-item {
-    min-width: calc(50% - 24px); } }
+    min-width: 330px; } }
 
 @media screen and (max-width: 720px) {
   .certificates-item {
-    min-width: calc(100%); }
+    min-width: 320px; }
   .certificates-title {
     font-size: 16px; } }
 
@@ -4441,7 +4483,7 @@ main {
     padding-bottom: 0 !important; }
   .main-inner {
     max-width: 1165px;
-    width: 100%; }
+    width: calc(100% - 422px); }
   .main-white {
     padding: 40px 0;
     background-color: #fff; }

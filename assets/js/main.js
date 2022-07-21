@@ -296,9 +296,9 @@ $(document).ready(function () {
                 min = $this.data('min')
 
             if (ui.handleIndex === 1) {
-                $this.parents(parent).find(max).val('до ' +ui.value)
+                $this.parents(parent).find(max).val('до ' + ui.value)
             } else {
-                $this.parents(parent).find(min).val('от ' +ui.value)
+                $this.parents(parent).find(min).val('от ' + ui.value)
             }
         }
     });
@@ -345,5 +345,30 @@ $(document).ready(function () {
         nextArrow: $('.footer-more__arrow-right'),
         prevArrow: $('.footer-more__arrow-left'),
     })
+
+    $('.certificates-list').slick({
+        slidesToShow: 3,
+        variableWidth: true,
+        pauseOnHover: true,
+        arrows: false
+    });
+    addCursorHover(".certificates-list", ".certificates-cursor", "active");
+
+    $('.certificates-list').on('mousemove mouseover', function (e) {
+        console.log(e)
+        $('.certificates-cursor').css({
+            "transform": `translate(${e.clientX}px, ${e.clientY}px)`
+        })
+    })
+
+
+
+    function addCursorHover(hoveredElement, selectedElement, newClass) {
+        $(hoveredElement).hover(function () {
+            $(selectedElement).addClass(newClass);
+        }, function () {
+            $(selectedElement).removeClass(newClass);
+        });
+    }
 })
 
