@@ -672,6 +672,54 @@
 </main>
 
 <!-- Footer -->
+<div class="modal" id="login">
+    <div class="modal-inner">
+        <div class="modal__container">
+            <div class="modal__header">
+                <div class="modal__title">Вход в личный кабинет</div>
+                <div class="modal__close close"></div>
+            </div>
+            <div class="modal__alert">
+                <div class="modal__alert-svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20V20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z"
+                              fill="#EC4B3C"/>
+                    </svg>
+                </div>
+                <div class="modal__alert-content">Личный кабинет доступен только для оптовых покупателей</div>
+            </div>
+            <div action="#" class="modal__form">
+                <div class="modal__form-item form-item form-item__error">
+                    <label for="login-input" class="modal__form-label form-label">Адрес электронной почты</label>
+                    <input type="text" class="modal__form-input form-input" id="login-input"
+                           placeholder="Введие Адрес электронной почты">
+                    <p class="form-input__error">Электронный адрес в неверном формате</p>
+                </div>
+                <div class="modal__form-item form-item">
+                    <label for="password-input" class="modal__form-label form-label">Пароль</label>
+                    <input type="password" class="modal__form-input form-input" id="password-input"
+                           placeholder="Введие пароль">
+                    <div class="modal__form-eye">
+                        <div class="see">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.34178 18.7824L7.41078 18.2644L8.19778 15.3254C7.01975 14.8909 5.9249 14.2577 4.96078 13.4534L2.80778 15.6074L1.39278 14.1924L3.54678 12.0394C2.33086 10.5831 1.51387 8.83611 1.17578 6.96935L3.14378 6.61035C3.90278 10.8124 7.57878 14.0004 11.9998 14.0004C16.4198 14.0004 20.0968 10.8124 20.8558 6.61035L22.8238 6.96835C22.4861 8.83537 21.6695 10.5827 20.4538 12.0394L22.6068 14.1924L21.1918 15.6074L19.0388 13.4534C18.0747 14.2577 16.9798 14.8909 15.8018 15.3254L16.5888 18.2654L14.6578 18.7824L13.8698 15.8424C12.6321 16.0544 11.3674 16.0544 10.1298 15.8424L9.34178 18.7824Z"
+                                      fill="#212121"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="modal__form-remove">
+                    Забыли пароль?
+                </a>
+                <div class="modal__form-item form-item">
+                    <input type="submit" class="modal__form-input__submit form-input__submit">
+                </div>
+                <a href="#" class="modal__form-register">Зарегистрироваться как юридическое лицо</a>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer">
     <div class="footer-top">
         <div class="wrapper">

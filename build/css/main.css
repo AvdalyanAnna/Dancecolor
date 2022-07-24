@@ -185,6 +185,9 @@ input, button {
 .header-search {
   cursor: pointer; }
   .header-search__block {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
     width: 100%;
     background-color: #fff;
     min-height: 540px;
@@ -198,8 +201,9 @@ input, button {
     left: 0;
     z-index: 9;
     top: 100px; }
-    .header-search__block-elements {
-      display: none; }
+    .header-search__block-elements.active .header-search__block {
+      opacity: 1;
+      visibility: visible; }
     .header-search__block-close {
       position: absolute;
       top: 30px;
@@ -400,10 +404,10 @@ input, button {
     display: flex;
     -ms-flex-pack: end;
         justify-content: flex-end;
-    right: -150vw;
+    right: 0;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s; }
+    transition: opacity 0.3s; }
     .header-catalog__block.active {
       opacity: 1;
       visibility: visible;
@@ -528,9 +532,9 @@ input, button {
     .header-menu.active .close {
       display: block; }
     .header-menu.active .header-menu__block {
-      display: block; }
+      opacity: 1;
+      visibility: visible; }
   .header-menu__block {
-    display: none;
     width: 589px;
     position: absolute;
     top: 100px;
@@ -538,7 +542,10 @@ input, button {
     height: calc(100vh - 100px);
     background-color: #fff;
     z-index: 5;
-    overflow-y: auto; }
+    overflow-y: auto;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden; }
     .header-menu__block::-webkit-scrollbar {
       width: 8px;
       margin-right: 20px; }
@@ -1563,7 +1570,12 @@ input, button {
     font-weight: 700;
     font-size: 28px;
     line-height: 120%;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .news-block__desc {
     font-weight: 400;
     font-size: 20px;
@@ -1732,6 +1744,8 @@ input, button {
   min-width: 308.33px;
   margin-bottom: 24px;
   margin-left: 24px; }
+  .certificates-item:nth-child(1) {
+    margin-left: 0; }
 
 .certificates-img {
   width: 100%;
@@ -1788,8 +1802,8 @@ input, button {
     pointer-events: none; }
   .certificates-cursor .cursor {
     position: absolute;
-    -webkit-transform: translate(-12.25vh, -24vh);
-            transform: translate(-12.25vh, -24vh);
+    -webkit-transform: translate(-12.25vh, -40vh);
+            transform: translate(-12.25vh, -40vh);
     opacity: 0;
     visibility: hidden;
     background: #212121;
@@ -1823,6 +1837,12 @@ input, button {
     min-width: 320px; }
   .certificates-title {
     font-size: 16px; } }
+
+@media screen and (max-width: 355px) {
+  .certificates-item {
+    min-width: 280px;
+    padding: 0;
+    width: 280px; } }
 
 /*
 TopBox is derived from Nivo Lightbox v1.3.1, created by Dev7studios:
@@ -5422,7 +5442,11 @@ main {
     margin-bottom: 8px;
     font-size: 16px; }
   .modal__form-item {
-    margin-bottom: 16px; } }
+    margin-bottom: 16px; }
+  .main-inner {
+    width: 100%; }
+  .main-inner__company {
+    max-width: 100%; } }
 
 @media screen and (max-width: 767px) {
   .personal-area__menu,
@@ -10637,5 +10661,16 @@ main {
   top: -2px; }
 
 .accordion-toggle,
+.aside-product-more,
 .aside-product-checkbox label {
+  cursor: pointer; }
+
+.header-item__with-icon svg {
+  pointer-events: none; }
+
+.category-min__more {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
   cursor: pointer; }

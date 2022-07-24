@@ -123,9 +123,17 @@
 
   &__block {
     &-elements {
-      display: none;
+      &.active {
+        .header-search__block {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
 
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
     width: 100%;
     background-color: #fff;
     min-height: 540px;
@@ -211,11 +219,13 @@
         padding: 8px 16px;
         gap: 8px;
         white-space: nowrap;
-        svg{
+
+        svg {
           transition: 0.3s;
         }
-        &:hover{
-          svg{
+
+        &:hover {
+          svg {
             transform: rotate(45deg);
           }
         }
@@ -388,11 +398,12 @@
     background: rgba(34, 34, 34, 0.6);
     display: flex;
     justify-content: flex-end;
-    right: -150vw;
+    right: 0;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
-    &.active{
+    transition: opacity 0.3s;
+
+    &.active {
       opacity: 1;
       visibility: visible;
       right: 0;
@@ -567,12 +578,12 @@
     }
 
     .header-menu__block {
-      display: block;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
   &__block {
-    display: none;
     width: 589px;
     position: absolute;
     top: 100px;
@@ -581,6 +592,9 @@
     background-color: #fff;
     z-index: 5;
     overflow-y: auto;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -810,6 +824,7 @@
 @media screen and (max-width: 1200px) {
   .header {
     height: 140px;
+
     &-logo {
       min-width: 90px;
       max-width: 161px;

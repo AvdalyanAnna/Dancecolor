@@ -25,6 +25,9 @@
     min-width: 308.33px;
     margin-bottom: 24px;
     margin-left: 24px;
+    &:nth-child(1){
+      margin-left: 0;
+    }
   }
 
   &-img {
@@ -102,7 +105,7 @@
 
   .cursor {
     position: absolute;
-    transform: translate(-12.25vh, -24vh);
+    transform: translate(-12.25vh, -40vh);
     @media screen and (max-width: 1500px) {
       transform: translate(-9.25vh, -36vh);
     }
@@ -142,6 +145,16 @@
 
     &-title {
       font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .certificates {
+    &-item {
+      min-width: 280px;
+      padding: 0;
+      width: 280px;
     }
   }
 }
